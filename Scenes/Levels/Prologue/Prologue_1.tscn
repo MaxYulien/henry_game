@@ -1,0 +1,185 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scripts/Scene Controllers/Prologue_1_controller.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Backgrounds/Prologue/Prologue_1_background.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Objects/Goal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Scene Controllers/Bed_controller.gd" type="Script" id=4]
+[ext_resource path="res://Graphics/Animations/Animated Props/Henry's Bed/Henry_bed_3.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/Animations/Animated Props/Henry's Bed/Henry_bed_1.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/Animations/Animated Props/Henry's Bed/Henry_bed_2.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/Object Controllers/Lamp_controller.gd" type="Script" id=8]
+[ext_resource path="res://Graphics/Animations/Animated Props/Henry's Lamp/Henry_lamp_2.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/Animations/Animated Props/Henry's Lamp/Henry_lamp_1.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "bed_2",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "bed_1",
+"speed": 1.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 64, 16 )
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": false,
+"name": "lamp_2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": false,
+"name": "lamp_1",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 16 )
+
+[node name="Prologue_1" type="Node" index="0"]
+
+script = ExtResource( 1 )
+current_scene = "res://Scenes/Levels/Prologue/Prologue_1.tscn"
+
+[node name="SpawnPoint" type="Position2D" parent="." index="0"]
+
+position = Vector2( 480, 480 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Background" type="TextureRect" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="Walls" type="StaticBody2D" parent="." index="2"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 896, 384, 896, 128, 384, 128, 384, 512, 960, 512, 960, 544, 352, 544, 352, 96, 928, 96, 928, 384 )
+
+[node name="Goal" parent="Walls" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 944, 448 )
+scale = Vector2( 0.5, 2 )
+warp_to = "res://Scenes/Levels/Prologue/Prologue_2.tscn"
+
+[node name="Props" type="Node2D" parent="." index="3"]
+
+[node name="Bed" type="Area2D" parent="Props" index="0"]
+
+position = Vector2( 480, 480 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Props/Bed" index="0"]
+
+frames = SubResource( 1 )
+animation = "bed_1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Props/Bed" index="1"]
+
+shape = SubResource( 2 )
+
+[node name="Lamp" type="Area2D" parent="Props" index="1"]
+
+position = Vector2( 608, 480 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Props/Lamp" index="0"]
+
+frames = SubResource( 3 )
+animation = "lamp_1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Props/Lamp" index="1"]
+
+shape = SubResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="4"]
+
+position = Vector2( 640, 320 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 0.7, 0.7 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+
+[connection signal="spawn_player" from="Props/Bed" to="." method="_on_Bed_spawn_player"]
+
+[connection signal="body_entered" from="Props/Lamp" to="Props/Lamp" method="_on_Lamp_body_entered"]
+
+[connection signal="body_exited" from="Props/Lamp" to="Props/Lamp" method="_on_Lamp_body_exited"]
+
+

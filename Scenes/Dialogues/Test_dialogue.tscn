@@ -1,0 +1,126 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Dialogues/Test_dialogue.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Dialogues/Test/Test_1.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Dialogues/Test/Test_2.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/Dialogues/Test/Test_3.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/Animations/Faces/Henry_speaking_neutral/Henry_speaking_neutral_1.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/Animations/Faces/Henry_speaking_neutral/Henry_speaking_neutral_2.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/Animations/Faces/Henry_speaking_neutral/Henry_speaking_neutral_3.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+
+length = 2.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Line_1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -6.58247, 6.71337 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Line_2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -11.5509, 11.7495 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Line_3:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -5.3617, 6.96052 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Face:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -14.2689, 6.38242 ]
+}
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Henry_silent_neutral",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Henry_speaking_neutral",
+"speed": 5.0
+} ]
+
+[node name="Test_dialogue" type="CanvasLayer"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="Line_1" type="Sprite" parent="." index="0"]
+
+position = Vector2( 800, 352 )
+rotation = -0.114886
+texture = ExtResource( 2 )
+
+[node name="Line_2" type="Sprite" parent="." index="1"]
+
+visible = false
+position = Vector2( 768, 352 )
+rotation = -0.201601
+texture = ExtResource( 3 )
+
+[node name="Line_3" type="Sprite" parent="." index="2"]
+
+visible = false
+position = Vector2( 800, 352 )
+rotation = -0.0935793
+texture = ExtResource( 4 )
+
+[node name="Text_animation" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = "Test_dialogue_rotate"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Test_dialogue_rotate = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Face" type="AnimatedSprite" parent="." index="4"]
+
+position = Vector2( 384, 352 )
+rotation = -0.249039
+frames = SubResource( 2 )
+animation = "Henry_speaking_neutral"
+_sections_unfolded = [ "Transform" ]
+
+

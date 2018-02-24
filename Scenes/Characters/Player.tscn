@@ -1,0 +1,107 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Scripts/Character Controllers/Player_controller.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Fall/Henry_unarmed_fall_1.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Fall/Henry_unarmed_fall_2.png" type="Texture" id=3]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Fall/Henry_unarmed_fall_3.png" type="Texture" id=4]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Jump/Henry_unarmed_jump_1.png" type="Texture" id=5]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Jump/Henry_unarmed_jump_2.png" type="Texture" id=6]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Jump/Henry_unarmed_jump_3.png" type="Texture" id=7]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Idle/Henry_unarmed_idle_1.png" type="Texture" id=8]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Idle/Henry_unarmed_idle_2.png" type="Texture" id=9]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Idle/Henry_unarmed_idle_3.png" type="Texture" id=10]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Run/Henry_unarmed_run_1.png" type="Texture" id=11]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Run/Henry_unarmed_run_2.png" type="Texture" id=12]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Run/Henry_unarmed_run_3.png" type="Texture" id=13]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Run/Henry_unarmed_run_4.png" type="Texture" id=14]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Run/Henry_unarmed_run_5.png" type="Texture" id=15]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Run/Henry_unarmed_run_6.png" type="Texture" id=16]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Run/Henry_unarmed_run_7.png" type="Texture" id=17]
+[ext_resource path="res://Graphics/Animations/Sprites/Henry Unarmed Run/Henry_unarmed_run_8.png" type="Texture" id=18]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 27.3309 )
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "Henry_unarmed_fall",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "Henry_unarmed_jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Henry_unarmed_idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Henry_unarmed_run",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 27.7246 )
+
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="Hit_detection" type="Area2D" parent="." index="0"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hit_detection" index="0"]
+
+position = Vector2( 0, 4 )
+shape = SubResource( 1 )
+
+[node name="Henry_img" type="AnimatedSprite" parent="." index="1"]
+
+frames = SubResource( 2 )
+animation = "Henry_unarmed_idle"
+
+[node name="Henry_hitbox" type="CollisionShape2D" parent="." index="2"]
+
+position = Vector2( 0, 4.39455 )
+shape = SubResource( 3 )
+
+[node name="Shoot_cooldown" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.2
+one_shot = true
+autostart = false
+
+[connection signal="area_entered" from="Hit_detection" to="." method="_on_Hit_detection_area_entered"]
+
+[connection signal="timeout" from="Shoot_cooldown" to="." method="_on_Shoot_cooldown_timeout"]
+
+

@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Scene Controllers/Title_screen_controller.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Placeholders/Placeholder Title Screen.png" type="Texture" id=2]
+[ext_resource path="res://Audio/Music/Air_Fortress_NES_Music_-_Title_Theme[Mp3Converter.net].ogg" type="AudioStream" id=3]
+
+[node name="Title_screen" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="Background" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="New Game" type="Button" parent="." index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -384.0
+margin_top = 56.0
+margin_right = -128.0
+margin_bottom = 152.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "New Game"
+flat = false
+align = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Load Game" type="Button" parent="." index="2"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -384.0
+margin_top = 184.0
+margin_right = -128.0
+margin_bottom = 280.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Load Game"
+flat = false
+align = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Music"
+
+[connection signal="pressed" from="New Game" to="." method="_on_New_Game_pressed"]
+
+[connection signal="pressed" from="Load Game" to="." method="_on_Load_Game_pressed"]
+
+

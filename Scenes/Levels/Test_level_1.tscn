@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Scene Controllers/Level_controller.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Backgrounds/Test_level_background.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=3]
+
+[node name="Test_level_1" type="Node"]
+
+script = ExtResource( 1 )
+current_scene = "res://Scenes/Levels/Test_level_1.tscn"
+
+[node name="Background" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 2400.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="Walls" type="StaticBody2D" parent="." index="1"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 64, 576, 320, 576, 320, 448, 384, 448, 384, 576, 704, 576, 704, 256, 768, 256, 768, 576, 1088, 576, 1088, 736, 1344, 736, 1344, 576, 1600, 576, 1600, 736, 2112, 736, 2112, 576, 2400, 576, 2400, 608, 2144, 608, 2144, 768, 1568, 768, 1568, 608, 1376, 608, 1376, 768, 1056, 768, 1056, 608, 64, 608 )
+
+[node name="Player" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 96, 352 )
+
+[node name="Level_boundary" type="Area2D" parent="." index="3" groups=[
+"obstacles",
+]]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level_boundary" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -224, 32, -192, 32, -192, 768, 960, 768, 960, 704, 1408, 704, 1408, 768, 1536, 768, 1536, 704, 2176, 704, 2176, 768, 2560, 768, 2560, 256, 2624, 256, 2624, 832, -256, 832, -256, 32 )
+
+[connection signal="fire" from="Player" to="." method="_on_Player_fire"]
+
+[connection signal="player_died" from="Player" to="." method="_on_Player_player_died"]
+
+
