@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Henry_bed_1.png-fffe9c3d54809a49810bb2b4fc8ffbee.stex"
+
+[deps]
+
+source_file="res://Graphics/Animations/Animated Props/Henry's Bed/Henry_bed_1.png"
+source_md5="7d5cfe4ae4df318ee47adfdf2c642562"
+
+dest_files=[ "res://.import/Henry_bed_1.png-fffe9c3d54809a49810bb2b4fc8ffbee.stex" ]
+dest_md5="8559ed1799ba77ca67ec3b5688584efa"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Prototype floor.png-37c0dedc2ceee0f3251d1ba9677d77ff.stex"
+
+[deps]
+
+source_file="res://Graphics/Placeholders/Prototype floor.png"
+source_md5="db285d5c4fba801a6261f0df41340f7b"
+
+dest_files=[ "res://.import/Prototype floor.png-37c0dedc2ceee0f3251d1ba9677d77ff.stex" ]
+dest_md5="65a2549f7770f8c4bb7de2de80868475"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

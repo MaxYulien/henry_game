@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Placeholder Title Screen.png-db0d0ed9c7ecc26c88cb2b7ad1b97c96.stex"
+
+[deps]
+
+source_file="res://Graphics/Placeholders/Placeholder Title Screen.png"
+source_md5="e3efb3b504aa53d73c43aedc136e3c1b"
+
+dest_files=[ "res://.import/Placeholder Title Screen.png-db0d0ed9c7ecc26c88cb2b7ad1b97c96.stex" ]
+dest_md5="f4c2b689f4b2ce6d0dc83cc0bd1fc705"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

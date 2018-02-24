@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Prototype Goal.png-1b084acebcd7b461997b8803afe62490.stex"
+
+[deps]
+
+source_file="res://Graphics/Placeholders/Prototype Goal.png"
+source_md5="128cf968033930753e5246df5a3d842a"
+
+dest_files=[ "res://.import/Prototype Goal.png-1b084acebcd7b461997b8803afe62490.stex" ]
+dest_md5="f00b76bd13c3db9faf78adad8532d8be"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

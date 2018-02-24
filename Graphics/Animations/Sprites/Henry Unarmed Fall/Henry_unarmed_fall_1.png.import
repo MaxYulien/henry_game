@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Henry_unarmed_fall_1.png-229830433b2bcdfba19a1e61cc40e584.stex"
+
+[deps]
+
+source_file="res://Graphics/Animations/Sprites/Henry Unarmed Fall/Henry_unarmed_fall_1.png"
+source_md5="c046290234f9b35706379875855dad63"
+
+dest_files=[ "res://.import/Henry_unarmed_fall_1.png-229830433b2bcdfba19a1e61cc40e584.stex" ]
+dest_md5="960e77dcdcae49e441076c7d4305daac"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

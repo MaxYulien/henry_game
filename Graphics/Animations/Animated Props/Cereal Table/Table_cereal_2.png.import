@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Table_cereal_2.png-6413c4965dc921e24251570b0b85341c.stex"
+
+[deps]
+
+source_file="res://Graphics/Animations/Animated Props/Cereal Table/Table_cereal_2.png"
+source_md5="e3be040890c1e42fbb3037e3066c6652"
+
+dest_files=[ "res://.import/Table_cereal_2.png-6413c4965dc921e24251570b0b85341c.stex" ]
+dest_md5="8dafe051a1fb0a13662fbe4d334527c7"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

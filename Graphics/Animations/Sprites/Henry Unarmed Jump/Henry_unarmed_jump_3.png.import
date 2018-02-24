@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Henry_unarmed_jump_3.png-8477e109b7c8b255b5b023aaf84fb296.stex"
+
+[deps]
+
+source_file="res://Graphics/Animations/Sprites/Henry Unarmed Jump/Henry_unarmed_jump_3.png"
+source_md5="8f79f452e6016a8889423ec99dc3cf46"
+
+dest_files=[ "res://.import/Henry_unarmed_jump_3.png-8477e109b7c8b255b5b023aaf84fb296.stex" ]
+dest_md5="f90015fc51a417c701e5aee33cf11b8a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

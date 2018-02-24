@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Henry_lamp_1.png-3fcd12daa629b6756a3a1efc0ff520cb.stex"
+
+[deps]
+
+source_file="res://Graphics/Animations/Animated Props/Henry's Lamp/Henry_lamp_1.png"
+source_md5="2273e38dfd372cb7debd90c7667ff19c"
+
+dest_files=[ "res://.import/Henry_lamp_1.png-3fcd12daa629b6756a3a1efc0ff520cb.stex" ]
+dest_md5="55027803065e3d1a8a9eff87e44195d8"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

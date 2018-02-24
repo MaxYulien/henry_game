@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Henry_unarmed_run_4.png-f8428f514cd8705407804720d72bee41.stex"
+
+[deps]
+
+source_file="res://Graphics/Animations/Sprites/Henry Unarmed Run/Henry_unarmed_run_4.png"
+source_md5="5ece732b344aab20720efecf84e761ae"
+
+dest_files=[ "res://.import/Henry_unarmed_run_4.png-f8428f514cd8705407804720d72bee41.stex" ]
+dest_md5="844a4ff06968f461b1b18c74259a1c0c"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

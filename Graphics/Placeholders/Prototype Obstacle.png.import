@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Prototype Obstacle.png-2e482d4b747e46ab098a362f589302ca.stex"
+
+[deps]
+
+source_file="res://Graphics/Placeholders/Prototype Obstacle.png"
+source_md5="aa2524cb2d2832eff1cfd70f5b78658a"
+
+dest_files=[ "res://.import/Prototype Obstacle.png-2e482d4b747e46ab098a362f589302ca.stex" ]
+dest_md5="e11b53d1309dd93a7da8c27993973ca3"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Henry_unarmed_idle_2.png-518639b896687192cc13468637c547f0.stex"
+
+[deps]
+
+source_file="res://Graphics/Animations/Sprites/Henry Unarmed Idle/Henry_unarmed_idle_2.png"
+source_md5="2d9e866239db5e03dd0c8b12a66aeb27"
+
+dest_files=[ "res://.import/Henry_unarmed_idle_2.png-518639b896687192cc13468637c547f0.stex" ]
+dest_md5="a38b2674cc0115db577c3be4fa58d3ff"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
